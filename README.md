@@ -2,9 +2,6 @@
 
 Sistema web responsivo, mobile-first, para profissionais organizarem clientes, serviços, cobranças, recebimentos e comprovantes. Uma conta pode ter perfil profissional, cliente ou os dois.
 
-## Estado desta entrega
-
-A Sprint 1 — login e acesso — permanece registrada como entregue. As funcionalidades abaixo estão implementadas no código; a equipe ainda deve revisar os fluxos e concluir a homologação na hospedagem.
 
 ## Funcionalidades
 
@@ -62,27 +59,3 @@ As páginas usam `index.php?rota=...`: `login`, `cadastro`, `recuperar_senha`, `
 - [Deploy KingHost, SMTP e cron](docs/deploy-kinghost.md)
 - [Recebimentos e QR Pix estático](docs/pix-estatico.md)
 - [Publicação no GitHub](docs/publicar-github.md)
-
-## Equipe
-
-| Integrante | Papel |
-|---|---|
-| Filipe | PO e Back End |
-| Vitor | Front End |
-| Talita | Scrum Master |
-| Alan | Back End |
-| Nickolas | Front End |
-
-## Validação da entrega
-
-Faça `php -l` nos arquivos PHP e homologue os fluxos numa base de teste antes de publicar. Em base existente, valide primeiro o backup e aplique somente a migração Pix indicada acima quando ainda faltar. Os filtros, popup e totalizadores desta entrega não exigem alteração no banco. Teste QR e Pix copia-e-cola com um pagamento de baixo valor em ambiente controlado antes de orientar clientes. SMTP autenticado não garante que a mensagem chegou; faça um envio real de homologação. Não apague dados para aplicar esta mudança.
-
-## GitHub
-
-Repositório da equipe: [Vitorkp/PagueProf](https://github.com/Vitorkp/PagueProf). Siga [docs/publicar-github.md](docs/publicar-github.md) antes de enviar alterações. Nunca versione `.env`, o ZIP privado ou uploads de comprovantes.
-
-## Versões futuras
-
-- Pix dinâmico por cobrança, com valor, vencimento e cobrança individual.
-- Conciliação automática por API/webhook e confirmação automática do pagamento.
-- Avaliação do Mercado Pago ou outro provedor, OAuth por profissional, tratamento de estorno e homologação. Nenhuma dessas integrações está ativa nesta versão.
